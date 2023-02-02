@@ -20,6 +20,8 @@ const compressProcess = async (
     cmd: Deno.build.os === "windows"
       ? [
         "PowerShell",
+        "-ExecutionPolicy",
+        "Bypass",
         "Compress-Archive",
         "-Path",
         filesList,

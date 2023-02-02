@@ -34,6 +34,8 @@ const decompressProcess = async (
     cmd: Deno.build.os === "windows"
       ? [
         "PowerShell",
+        "-ExecutionPolicy",
+        "Bypass",
         "Expand-Archive",
         "-Path",
         `"${zipSourcePath}"`,
